@@ -40,6 +40,9 @@ const WidgetLayout = ({
       autofocus={autofocus}
       titleAvatar={titleAvatar}
       className={showChat ? 'active' : 'hidden'}
+      style={{
+        pointerEvents:showChat?'inherit':'none'
+      }}
     />
     {customLauncher ?
       customLauncher(onToggleConversation) :
