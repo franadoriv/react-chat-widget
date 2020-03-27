@@ -26,6 +26,9 @@ const WidgetLayout = ({
     className={
       `rcw-widget-container ${fullScreenMode ? 'rcw-full-screen' : ''}`
     }
+    style={{
+      pointerEvents:showChat?'inherit':'none'
+    }}
   >
     <Conversation
       title={title}
@@ -40,9 +43,6 @@ const WidgetLayout = ({
       autofocus={autofocus}
       titleAvatar={titleAvatar}
       className={showChat ? 'active' : 'hidden'}
-      style={{
-        pointerEvents:showChat?'inherit':'none'
-      }}
     />
     {customLauncher ?
       customLauncher(onToggleConversation) :
