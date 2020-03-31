@@ -53,6 +53,8 @@ class Widget extends Component {
         badge={this.props.badge}
         autofocus={this.props.autofocus}
         customLauncher={this.props.customLauncher}
+        addUserMessage={this.props.addUserMessage}
+        enabled={this.props.enabled}
       />
     );
   }
@@ -71,7 +73,8 @@ Widget.propTypes = {
   badge: PropTypes.number,
   autofocus: PropTypes.bool,
   customLauncher: PropTypes.func,
-  addUserMessage: PropTypes.bool
+  addUserMessage: PropTypes.bool,
+  enabled:PropTypes.bool
 };
 
 export default connect()(Widget);

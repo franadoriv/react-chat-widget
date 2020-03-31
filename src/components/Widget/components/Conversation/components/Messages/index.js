@@ -40,7 +40,7 @@ class Messages extends Component {
     const { messages, profileAvatar, typing } = this.props;
     return (
       <div id="messages" className="rcw-messages-container" ref={msg => this.$message = msg}>
-        {messages && messages.length>0 && messages.map((message, index) =>
+        {messages.map((message, index) =>
           <div className="rcw-message" key={index}>
             {profileAvatar &&
               message.get('showAvatar') &&
